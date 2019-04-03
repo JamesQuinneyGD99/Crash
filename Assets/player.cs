@@ -24,13 +24,17 @@ public class player : MonoBehaviour
     {
         float mult = 3 - (Mathf.Abs(Input.GetAxis("Speed")) + 1);
 
-        Vector3 cameraAngles = Camera.main.transform.eulerAngles;
+		Transform camTrans = Camera.main.transform;
+        Vector3 cameraAngles = camTrans.eulerAngles;
 
-        body.eulerAngles = new Vector3(0.0f,cameraAngles.y + 180.0f,0.0f);
+		if(Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f || Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f){
+			body.rotation = Quaternion.LookRotation(new Vector3(Input.GetAxis("Horizontal"),0.0f,Input.GetAxis("Vertical")));
+			body.eulerAngles += new Vector3(0.0f,cameraAngles.y + 180.0f,0.0f);
+		}
         Rigidbody rb = GetComponent<Rigidbody>();
         float yVel = rb.velocity.y;
 
-        rb.velocity = body.transform.forward * Input.GetAxis("Vertical") * -3.0f * mult + body.transform.right * Input.GetAxis("Horizontal") * -3.0f * mult;
+		rb.velocity = camTrans.forward * Input.GetAxis("Vertical") * 3.0f * mult + camTrans.right * Input.GetAxis("Horizontal") * 3.0f * mult;
         rb.velocity = new Vector3(rb.velocity.x,yVel,rb.velocity.z);
 
         if(Input.GetButtonDown("Jump") && onFloor){

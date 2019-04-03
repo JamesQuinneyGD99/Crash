@@ -16,8 +16,8 @@ public class CameraRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        yaw += Input.GetAxis("Mouse X");
-        pitch += Input.GetAxis("Mouse Y");
+		yaw += Input.GetAxis("Mouse X") * (Time.deltaTime * 50.0f);
+		pitch += Input.GetAxis("Mouse Y") * (Time.deltaTime * 50.0f);
 
         transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
     }
