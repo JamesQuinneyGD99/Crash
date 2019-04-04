@@ -39,8 +39,10 @@ public class player : MonoBehaviour
 		}
         float yVel = rb.velocity.y; // We store the player's Y velocity so it isn't overwritten
 
+		camTrans.eulerAngles = new Vector3(0.0f,camTrans.eulerAngles.y,0.0f); // This ensures the player isn't pushed into the ground
 		rb.velocity = camTrans.forward * Input.GetAxis("Vertical") * 3.0f * mult + camTrans.right * Input.GetAxis("Horizontal") * 3.0f * mult; // We make the player move, relative to the camera's rotation
-        rb.velocity = new Vector3(rb.velocity.x,yVel,rb.velocity.z); // We restore the Y velocity
+		camTrans.eulerAngles = cameraAngles; // We restore our camera angles
+		rb.velocity = new Vector3(rb.velocity.x,yVel,rb.velocity.z); // We restore the Y velocity
 
 		// note, restoring Y velocity ensures the player doesn't walk along 3 axes
 

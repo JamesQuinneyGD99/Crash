@@ -14,9 +14,9 @@ public class CameraRotator : MonoBehaviour
     void Update()
     {
 		// We increase the pitch/yaw of the amera based on the player's mouse movement
-		yaw += Input.GetAxis("Mouse X") * Time.deltaTime;
-		pitch += Input.GetAxis("Mouse Y") * Time.deltaTime;
+		yaw += Input.GetAxis("Mouse X") * 100.0f * Time.deltaTime;
+		pitch += Input.GetAxis("Mouse Y") * 100.0f * Time.deltaTime;
 
-        transform.eulerAngles = new Vector3(pitch * 50.0f, yaw * 50.0f, 0.0f); // We update the camera's angles
+        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f); // We update the camera's angles
     }
 }
