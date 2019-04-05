@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-H:/Unity/Projects/Bad Crabs Alternative/build/Bad Crabs Alternative.exe
+D:/Unity/Projects/Bad Crabs Alternative/build/Bad Crabs Alternative.exe
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?

@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\loadSurroundingChunks.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player.cs">
     <Files>
-      <File FileName="Assets\TerrainGenerator.cs" Line="6" Column="17" />
-      <File FileName="Assets\player.cs" Line="7" Column="42" />
-      <File FileName="Assets\CameraRotator.cs" Line="7" Column="44" />
-      <File FileName="Assets\LegMover.cs" Line="7" Column="51" />
-      <File FileName="Assets\Enemy.cs" Line="7" Column="53" />
-      <File FileName="Assets\Crab\CrabLegMover.cs" Line="7" Column="21" />
-      <File FileName="Assets\GemCollector.cs" Line="7" Column="58" />
-      <File FileName="Assets\GemRotator.cs" Line="7" Column="16" />
-      <File FileName="Assets\loadSurroundingChunks.cs" Line="15" Column="53" />
+      <File FileName="Assets\TerrainGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets\player.cs" Line="33" Column="92" />
+      <File FileName="Assets\CameraRotator.cs" Line="18" Column="41" />
+      <File FileName="Assets\LegMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Crab\CrabLegMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\GemCollector.cs" Line="1" Column="1" />
+      <File FileName="Assets\GemRotator.cs" Line="1" Column="1" />
+      <File FileName="Assets\loadSurroundingChunks.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
